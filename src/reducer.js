@@ -1,13 +1,19 @@
 import { evaluate } from "mathjs";
 const reducer = (state, action) => {
   if (action.type === "evaluate") {
-    const result = evaluate(state.formula);
-    return {
-      ...state,
-      input: result,
-      formula: state.formula + "=" + result,
-      isEvaluated: true,
-    };
+    try {
+      const result = evaluate(state.formula);
+      return {
+        ...state,
+        input: result,
+        formula: state.formula + "=" + result,
+        isEvaluated: true,
+      };
+    } catch (e) {
+      return {
+        ...state,
+      };
+    }
   }
 
   if (action.type === "number") {
