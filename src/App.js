@@ -62,6 +62,7 @@ function App() {
                 className={button.class}
                 value={button.value}
                 id={button.id}
+                key={button.id}
                 onClick={() => {
                   signBtn(button.value);
                 }}
@@ -74,6 +75,7 @@ function App() {
               <button
                 className={button.class}
                 value={button.value}
+                key={button.id}
                 id={button.id}
                 onClick={() => {
                   dispatch({ type: "AC" });
@@ -87,6 +89,7 @@ function App() {
               <button
                 className={button.class}
                 value={button.value}
+                key={button.id}
                 id={button.id}
                 onClick={() => {
                   dispatch({ type: "evaluate" });
@@ -101,6 +104,7 @@ function App() {
                 className={button.class}
                 value={button.value}
                 id={button.id}
+                key={button.id}
                 onClick={() => {
                   dispatch({ type: "decimal" });
                 }}
@@ -114,6 +118,7 @@ function App() {
                 className={button.class}
                 value={button.value}
                 id={button.id}
+                key={button.id}
                 onClick={() => {
                   dispatch({ type: "number", payload: button.value });
                 }}
